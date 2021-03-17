@@ -16,6 +16,16 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    //round utility taken from stackoverflow - https://stackoverflow.com/questions/2808535/round-a-double-to-2-decimal-places
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        long factor = (long) Math.pow(10, places);
+        value = value * factor;
+        long tmp = Math.round(value);
+        return (double) tmp / factor;
+    }
+
     //declared variables
     Button button1;
     Button button2;
@@ -63,15 +73,82 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onClick(View v) {
                 if(parent.getSelectedItem().toString().equals("Metre"))
                 {
-                    output1.setText("1");
+                    if(input.getText().toString().length() == 0){input.setText("0");}
+                    //sets output names on click of button
+                    output1name.setText("Centimetre");
+                    output2name.setText("foot");
+                    output3name.setText("Inch");
+                    //calculation for each output
+
+                    double dubinput = Double.parseDouble(input.getText().toString());
+                    output1.setText(String.valueOf(round(dubinput * 100, 2)));
+                    output2.setText(String.valueOf(round(dubinput * 3.281, 2)));
+                    output3.setText(String.valueOf(round(dubinput * 39.37, 2)));
+
                 }
                 if(parent.getSelectedItem().toString().equals("Celsius"))
                 {
-                    output1.setText("2");
+                    Toast.makeText(MainActivity.this, "Please Sellect Correct Option", Toast.LENGTH_LONG ).show();
                 }
                 if(parent.getSelectedItem().toString().equals("Kilograms"))
                 {
-                    output1.setText("3");
+                    Toast.makeText(MainActivity.this, "Please Sellect Correct Option", Toast.LENGTH_LONG ).show();
+                }
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(parent.getSelectedItem().toString().equals("Metre"))
+                {
+                    Toast.makeText(MainActivity.this, "Please Sellect Correct Option", Toast.LENGTH_LONG ).show();
+                }
+                if(parent.getSelectedItem().toString().equals("Celsius"))
+                {
+                    if(input.getText().toString().length() == 0){input.setText("0");}
+                    //sets output names on click of button
+                    output1name.setText("Fahrenheit");
+                    output2name.setText("Kelvin");
+                    output3name.setText(" ");
+                    //calculation for each output
+
+                    double dubinput = Double.parseDouble(input.getText().toString());
+                    output1.setText(String.valueOf(round((dubinput * 9/5) + 32, 2)));
+                    output2.setText(String.valueOf(round(dubinput + 273.15, 2)));
+                    output3.setText(" ");
+                }
+                if(parent.getSelectedItem().toString().equals("Kilograms"))
+                {
+                    Toast.makeText(MainActivity.this, "Please Sellect Correct Option", Toast.LENGTH_LONG ).show();
+                }
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(parent.getSelectedItem().toString().equals("Metre"))
+                {
+                    Toast.makeText(MainActivity.this, "Please Sellect Correct Option", Toast.LENGTH_LONG ).show();
+                }
+                if(parent.getSelectedItem().toString().equals("Celsius"))
+                {
+                    Toast.makeText(MainActivity.this, "Please Sellect Correct Option", Toast.LENGTH_LONG ).show();
+                }
+                if(parent.getSelectedItem().toString().equals("Kilograms"))
+                {
+                    if(input.getText().toString().length() == 0){input.setText("0");}
+                    //sets output names on click of button
+                    output1name.setText("Gram");
+                    output2name.setText("Ounce(Oz)");
+                    output3name.setText("Pound(lb)");
+                    //calculation for each output
+
+                    double dubinput = Double.parseDouble(input.getText().toString());
+                    output1.setText(String.valueOf(round(dubinput * 1000, 2)));
+                    output2.setText(String.valueOf(round(dubinput * 35.274, 2)));
+                    output3.setText(String.valueOf(round(dubinput * 2.205, 2)));
                 }
             }
         });

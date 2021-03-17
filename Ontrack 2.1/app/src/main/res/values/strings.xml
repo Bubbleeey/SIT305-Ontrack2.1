@@ -3,12 +3,12 @@
     <string name="button1">Button</string>
     <string name="button2">Button</string>
     <string name="button3">Button</string>
-    <string name="output3name">Temp</string>
-    <string name="output3">Temp</string>
-    <string name="output2name">Temp</string>
-    <string name="output2">Temp</string>
-    <string name="output1name">Temp</string>
-    <string name="output1">Temp</string>
+    <string name="output3name"> </string>
+    <string name="output3"> </string>
+    <string name="output2name"> </string>
+    <string name="output2"> </string>
+    <string name="output1name"> </string>
+    <string name="output1"> </string>
     //array for spinner
     <string-array name="unit">
         <item>Metre</item>
