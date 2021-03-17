@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Ontrack2.1</string>
+    <string name="button1">Button</string>
+    <string name="button2">Button</string>
+    <string name="button3">Button</string>
+    <string name="output3name">Temp</string>
+    <string name="output3">Temp</string>
+    <string name="output2name">Temp</string>
+    <string name="output2">Temp</string>
+    <string name="output1name">Temp</string>
+    <string name="output1">Temp</string>
+    //array for spinner
+    <string-array name="unit">
+        <item>Metre</item>
+        <item>Celsius</item>
+        <item>Kilograms</item>
+    </string-array>
 </resources>
