@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">week2prac</string>
+    <string name="first_number">First Number</string>
+    <string name="second_number">Second Number</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="times">X</string>
+    <string name="divide">/</string>
+    <string name="calculation">Calculation</string>
+</resources>

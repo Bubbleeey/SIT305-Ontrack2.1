@@ -1,0 +1,8 @@
+com/example/week2prac/BuildConfig.java
+ com.example.week2prac.BuildConfig
+com/example/week2prac/MainActivity.java
+ com.example.week2prac.MainActivity
+ com.example.week2prac.MainActivity$1
+ com.example.week2prac.MainActivity$2
+ com.example.week2prac.MainActivity$3
+ com.example.week2prac.MainActivity$4
