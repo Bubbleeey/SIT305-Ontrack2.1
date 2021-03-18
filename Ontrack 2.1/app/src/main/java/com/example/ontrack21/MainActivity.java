@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Button;
 import android.widget.TextView;
@@ -27,9 +28,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     //declared variables
-    Button button1;
-    Button button2;
-    Button button3;
+    ImageButton button1;
+    ImageButton button2;
+    ImageButton button3;
     EditText input;
     TextView output1name;
     TextView output1;
